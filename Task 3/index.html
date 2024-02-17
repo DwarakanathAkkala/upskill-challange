@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task </title>
+</head>
+<style>
+    body {
+        background-color: lightgray;;
+    }
+    main {
+        display: grid;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .container {
+        color: #FFF;
+    }
+
+</style>
+<body>
+    <main>
+        
+        <div class="container">
+            <img src="https://drive.google.com/file/d/1osGNPyMkQ6--lWJRnmlWP9B7YVZOHEFR/view?usp=drive_link" alt="Image of bulb at off state" id="bulb-image" onclick="imageChange()">
+        </div>
+
+    </main>
+
+    <script>
+        function imageChange(){
+            console.log("Hello")
+            console.log(document.getElementById("bulb-image").src)
+            if (document.getElementById("bulb-image").src == "ONbulb.jpg"){
+                document.getElementById("bulb-image").src = "OFFbulb.jpg";
+            } else {
+                document.getElementById("bulb-image").src = "ONbulb.jpg";
+            }
+        }
+    </script>
+</body>
+</html>
