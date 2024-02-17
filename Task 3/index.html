@@ -9,6 +9,7 @@
     body {
         background-color: lightgray;;
     }
+
     main {
         display: grid;
         position: absolute;
@@ -17,8 +18,24 @@
         transform: translate(-50%, -50%);
     }
 
+    img {
+        transition: transform 0.4s ease-in-out;    
+    }
+
+    img:hover {
+        transform: scale(1.2);
+    }
+
     .container {
-        color: #FFF;
+        display: grid;
+        justify-items: center;
+        row-gap: 2rem;
+        background-color: #FFF;
+        padding: 3rem 6rem;
+    }
+
+    span {
+        font-size: 1.5rem;
     }
 
 </style>
@@ -26,7 +43,9 @@
     <main>
         
         <div class="container">
-            <img src="OFFbulb.jpg" alt="Image of bulb at off state" id="bulb-image" onclick="imageChange()">
+            <img src="https://img.playbook.com/EwfW-fQvttlGTqjNHh79x9Nm5UyeP-3yLdmw7vlQVkY/Z3M6Ly9wbGF5Ym9v/ay1hc3NldHMtcHVi/bGljLzliY2YxZTQw/LTcyYjktNDU4Mi1i/YTBlLTE1MmI2OWI0/OTI5OA" alt="Image of bulb at off state" id="bulb-image" onclick="imageChange()">
+
+            <span>Click on the bulb to turn it ON or OFF</span>
         </div>
 
     </main>
@@ -35,10 +54,10 @@
         function imageChange(){
             console.log("Hello")
             console.log(document.getElementById("bulb-image").src)
-            if (document.getElementById("bulb-image").src == "OFFbulb.jpg"){
-                document.getElementById("bulb-image").src = "ONbulb.jpg";
+            if (document.getElementById("bulb-image").src == "https://img.playbook.com/EwfW-fQvttlGTqjNHh79x9Nm5UyeP-3yLdmw7vlQVkY/Z3M6Ly9wbGF5Ym9v/ay1hc3NldHMtcHVi/bGljLzliY2YxZTQw/LTcyYjktNDU4Mi1i/YTBlLTE1MmI2OWI0/OTI5OA"){
+                document.getElementById("bulb-image").src = "https://img.playbook.com/MgYSatAWzVuQJO_j5bVg_J8g5XEmJ6K4yadpYhJXfL0/Z3M6Ly9wbGF5Ym9v/ay1hc3NldHMtcHVi/bGljL2M5ZjJlNDg1/LTdhNmEtNDcyYS05/ZGYxLTY3MWQ5Yzc2/M2M5Ng";
             } else {
-                document.getElementById("bulb-image").src = "OFFbulb.jpg";
+                document.getElementById("bulb-image").src = "https://img.playbook.com/EwfW-fQvttlGTqjNHh79x9Nm5UyeP-3yLdmw7vlQVkY/Z3M6Ly9wbGF5Ym9v/ay1hc3NldHMtcHVi/bGljLzliY2YxZTQw/LTcyYjktNDU4Mi1i/YTBlLTE1MmI2OWI0/OTI5OA";
             }
         }
     </script>
